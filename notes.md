@@ -1,0 +1,11 @@
+## Environment
+- Python3.10
+	- Python3.12 does not have a working `tensorflow` yet so we are stuck with 3.10 
+- main requirements (all `pip` installable):
+	- `rdkit`
+	- `tensorflow==2.15.0`
+	- `keras==3.0.4`
+		- `keras` gets installed automatically when installing `tensorflow` but it is an older version so it needs to be force-upgraded afterwards to get the current version
+	- `scikit-learn`
+	- `numpy`
+- The version of SQLite3 built into Python3.10 does not support the `STRICT` mode for database table definitions and actually raises errors if you try to read a database with `STRICT` tables. To be able to read data from the existing `idpp.db` (which has `STRICT` tables), I just made a copy of it without `STRICT` (`idpp_nostrict.db`). This works for now but is kind of an annoying non-solution, need to figure out something better at some point.
