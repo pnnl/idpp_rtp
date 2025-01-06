@@ -113,3 +113,6 @@ To plot the model use the plots() function. This function takes in the test rt a
  
 
 
+# Related Repositories
+- [main identification probability analysis codebase](https://github.com/pnnl/idpp_main)
+- [molecular property prediction workflow](https://github.com/pnnl/idpp_workflow)
